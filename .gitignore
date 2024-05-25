@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/NetCoreApi/.vs/NetCoreApi
+/NetCoreApi/NetCoreApi/bin/Debug/net6.0
+/NetCoreApi/NetCoreApi/obj
+/NetCoreApi/Models/bin/Debug/net6.0
+/NetCoreApi/Models/obj
+/NetCoreApi/Services/bin/Debug/net6.0
+/NetCoreApi/Services/obj
