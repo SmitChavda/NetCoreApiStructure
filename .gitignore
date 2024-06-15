@@ -9,3 +9,6 @@
 /NetCoreApi/Models/obj
 /NetCoreApi/Services/bin/Debug/net6.0
 /NetCoreApi/Services/obj
+/NetCoreApi/.vs/ProjectEvaluation
+/NetCoreApi/Dto/bin/Debug/net6.0
+/NetCoreApi/Dto/obj

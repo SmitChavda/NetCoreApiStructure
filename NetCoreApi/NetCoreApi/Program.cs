@@ -2,6 +2,8 @@ using Models;
 using Services.Implementations;
 using Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using AutoMapper;
+using NetCoreApi.MappingProfile;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,14 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+var mapper = new MapperConfiguration(mp =>
+{
+    mp.AddProfile(new MappingProfile());
+});
+
+var maping = mapper.CreateMapper();
+builder.Services.AddSingleton(maping);
 
 builder.Services.AddScoped<IHomeService, HomeService>();
 

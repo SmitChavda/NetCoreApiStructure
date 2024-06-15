@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Services.Interfaces;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -11,11 +12,14 @@ namespace NetCoreApi.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IHomeService _homeService;
+        // Create a field to store the mapper object
+        private readonly IMapper _mapper;
 
-        public HomeController(ILogger<HomeController> logger, IHomeService homeService)
+        public HomeController(ILogger<HomeController> logger, IHomeService homeService, IMapper mapper)
         {
             _logger = logger;
             _homeService = homeService;
+            _mapper = mapper;
         }
 
         // GET: api/<HomeController>
